@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/primeroFragment">
+
+    <fragment
+        android:id="@+id/terceroFragment"
+        android:name="com.marisma.ejemplonavegacion.TerceroFragment"
+        android:label="fragment_tercero"
+        tools:layout="@layout/fragment_tercero" />
+    <fragment
+        android:id="@+id/segundoFragment"
+        android:name="com.marisma.ejemplonavegacion.SegundoFragment"
+        android:label="fragment_segundo"
+        tools:layout="@layout/fragment_segundo" />
+    <fragment
+        android:id="@+id/primeroFragment"
+        android:name="com.marisma.ejemplonavegacion.PrimeroFragment"
+        android:label="fragment_primero"
+        tools:layout="@layout/fragment_primero" >
+        <action
+            android:id="@+id/action_primeroFragment_to_segundoFragment"
+            app:destination="@id/segundoFragment" />
+        <action
+            android:id="@+id/action_primeroFragment_to_terceroFragment"
+            app:destination="@id/terceroFragment" />
+    </fragment>
+</navigation>
