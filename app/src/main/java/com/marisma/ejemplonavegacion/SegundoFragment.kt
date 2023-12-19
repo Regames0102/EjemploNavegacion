@@ -32,9 +32,13 @@ class SegundoFragment : Fragment() {
     ): View? {
         val aux= inflater.inflate(R.layout.fragment_segundo, container, false)
         // Inflate the layout for this fragment
-        val btnF2 =aux.findViewById<Button>(R.id.btnF2Volver)
+        val btnF3 =aux.findViewById<Button>(R.id.btnF2Volver)
+        val btnF2 =aux.findViewById<Button>(R.id.btnF2IR)
         btnF2.setOnClickListener{
             findNavController().navigate(R.id.action_segundoFragment_to_cuartoFragment)
+        }
+        btnF3.setOnClickListener{
+            findNavController().navigate(R.id.action_segundoFragment_to_primeroFragment)
         }
         return aux
     }

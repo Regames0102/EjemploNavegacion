@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -29,7 +31,12 @@ class CuartoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cuarto, container, false)
+        val aux= inflater.inflate(R.layout.fragment_cuarto, container, false)
+        val btnF4 =aux.findViewById<Button>(R.id.btnF4Volver)
+        btnF4.setOnClickListener{
+            findNavController().navigate(R.id.action_cuartoFragment_to_primeroFragment)
+        }
+        return aux
     }
 
     companion object {

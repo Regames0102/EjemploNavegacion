@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,13 @@ class TerceroFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tercero, container, false)
+        val aux= inflater.inflate(R.layout.fragment_tercero, container, false)
+        // Inflate the layout for this fragment
+        val btnF2 =aux.findViewById<Button>(R.id.btnF3Volver)
+        btnF2.setOnClickListener{
+            findNavController().navigate(R.id.action_terceroFragment_to_primeroFragment2)
+        }
+        return aux
     }
 
     companion object {
