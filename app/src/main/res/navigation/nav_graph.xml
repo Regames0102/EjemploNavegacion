@@ -14,7 +14,15 @@
         android:id="@+id/segundoFragment"
         android:name="com.marisma.ejemplonavegacion.SegundoFragment"
         android:label="fragment_segundo"
-        tools:layout="@layout/fragment_segundo" />
+        tools:layout="@layout/fragment_segundo" >
+        <action
+            android:id="@+id/action_segundoFragment_to_cuartoFragment"
+            app:destination="@id/cuartoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
     <fragment
         android:id="@+id/primeroFragment"
         android:name="com.marisma.ejemplonavegacion.PrimeroFragment"
@@ -22,9 +30,22 @@
         tools:layout="@layout/fragment_primero" >
         <action
             android:id="@+id/action_primeroFragment_to_segundoFragment"
-            app:destination="@id/segundoFragment" />
+            app:destination="@id/segundoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_primeroFragment_to_terceroFragment"
-            app:destination="@id/terceroFragment" />
+            app:destination="@id/terceroFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/cuartoFragment"
+        android:name="com.marisma.ejemplonavegacion.CuartoFragment"
+        android:label="fragment_cuarto"
+        tools:layout="@layout/fragment_cuarto" />
 </navigation>
